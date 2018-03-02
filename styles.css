@@ -1,0 +1,40 @@
+body {
+  max-width: 960px;
+  position: relative;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+  
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+  
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+  }
+
+.lineB {
+  fill: none;
+  stroke: red;
+  stroke-width: 2px;
+  }
+
+  .overlay {
+    fill: none;
+    pointer-events: all;
+  }
+
+  .focus {
+    font-size: 14px;
+  }
+
+  .focus circle {
+    fill: #5e8dc9;
+  }
