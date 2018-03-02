@@ -85,6 +85,7 @@ function appendLineCharts()
   .attr("class", "line")
   .attr("d", valueline);
 
+  // define the new line
   var expenseline = d3.line()
                     .x(function(d) { return x(d.month); })
                     .y(function(d) { return y(d.expense); });
@@ -97,43 +98,4 @@ function appendLineCharts()
 
 }
 
- //Binds the data to the line
- var drawline = svg.append("path")
- .datum(data)
- .attr("class", "line")
- .attr("d", line);    	
-
-//Tooltips
-var focus = svg.append("g")
-   .attr("class", "focus")
-   .style("display", "none");
-
-//Adds circle to focus point on line
-focus.append("circle")
-   .attr("r", 4);
-
-//Adds text to focus point on line    
-focus.append("text")
-   .attr("x", 9)
-   .attr("dy", ".35em");    
-
-//Creates larger area for tooltip   
-var overlay = svg.append("rect")
-   .attr("class", "overlay")
-   .attr("width", width)
-   .attr("height", height)
-   .on("mouseover", function() { focus.style("display", null); })
-   .on("mouseout", function() { focus.style("display", "none"); })
-   .on("mousemove", mousemove);
-
-//Tooltip mouseovers            
-function mousemove() {
- var x0 = xScale.invert(d3.mouse(this)[0]),
-     i = bisectDate(data, x0, 1),
-     d0 = data[i - 1],
-     d1 = data[i],
-     d = x0 - d0.date > d1.date - x0 ? d1 : d0;
- focus.attr("transform", "translate(" + xScale(d.date) + "," + yScale(d.num) + ")");
- focus.select("text").text(d.num);
-}; 
-  
+ 

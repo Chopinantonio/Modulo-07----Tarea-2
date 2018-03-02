@@ -1,7 +1,3 @@
-body {
-  max-width: 960px;
-  position: relative;
-}
 
 .axis text {
   font: 10px sans-serif;
@@ -24,17 +20,4 @@ body {
   fill: none;
   stroke: red;
   stroke-width: 2px;
-  }
-
-  .overlay {
-    fill: none;
-    pointer-events: all;
-  }
-
-  .focus {
-    font-size: 14px;
-  }
-
-  .focus circle {
-    fill: #5e8dc9;
   }
