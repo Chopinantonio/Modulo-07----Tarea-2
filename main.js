@@ -5,15 +5,18 @@ let margin = null,
     height = null;
 
 let svg = null;
+let tooltip = null;
 let x, y = null; // scales
 
 setupCanvasSize();
 appendSvg("body");
+appendTooltip("body");
 setupXScale();
 setupYScale();
 appendXAxis();
 appendYAxis();
 appendLineCharts();
+appendPointCharts();
 
 
 // 1. let's start by selecting the SVG Node
@@ -30,6 +33,14 @@ function appendSvg(domElement) {
               .append("g")
               .attr("transform",`translate(${margin.left}, ${margin.top})`);
 
+}
+
+
+function appendTooltip(domElement){
+  tooltip=d3.select(domElement)
+    .append('div')	
+    .attr('class', 'tooltip')				
+    .style('opacity', 0);
 }
 
 // Now on the X axis we want to map totalSales values to
@@ -84,18 +95,34 @@ function appendLineCharts()
   .data([totalSales])
   .attr("class", "line")
   .attr("d", valueline);
+}
 
-  // define the new line
-  var expenseline = d3.line()
-                    .x(function(d) { return x(d.month); })
-                    .y(function(d) { return y(d.expense); });
+function appendPointCharts(){
+  svg.selectAll('dot')
+    .data(totalSales)
+    .enter().append('circle')
+    .style('fill','darkblue')
+    .attr('r', 4.5)
+    .attr('cx', d => x(d.month))
+    .attr('cy', d =>y(d.sales))
+    .on('mouseover',d=>{
 
-  // Add the valueline path.
-  svg.append("path")
-  .data([totalExpenses])
-  .attr("class", "lineB")
-  .attr("d", expenseline);
+      //Show the tooltip
+      tooltip.transition()		
+        .duration(200)		
+        .style('opacity', .9);
 
+      // Add context to tooltip
+      tooltip.html(`<span>${d.sales}</span>`)	
+        .style('left', (d3.event.pageX) + 'px')		
+        .style('top', (d3.event.pageY - 28) + 'px');
+
+    }).on('mouseout',d=>{
+      //Hide the tooltip
+      tooltip.transition()		
+        .duration(500)
+        .style('opacity', 0);
+    });
 }
 
  
