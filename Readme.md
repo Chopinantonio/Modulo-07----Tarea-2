@@ -27,6 +27,26 @@ We set up the scale of each axis of coordinates. We want the on the Y axis the v
 
 ![alter text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/axisXY.png)
 
+#### 4) Build the lines
+
+Now, it´s time to create the lines of the graph. First of all, we create a variable which define the line. After that, we add the valueline path. Let´s see the code used in this step:
+
+![alter text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/lines.png)
+
+#### 5) Add dots and interaction
+
+Finally, let's add a function that should allow us to obtain information whenever we put the cursor of the mouse on algun point of the graph. For it we will create the following "tooltip". A tooltip is a tool of visual help, which works on having placed the cursor on some graphical element, showing an additional help to inform the user about this element.
+
+![alter text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/tooltip.pn)
 
 
+Now we create a function which by using this tooltip, shows the information of each point selected:
 
+![alter text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/mouse.png)
+
+First, we define the points on each value of our data in our lines graph. After that, we define how to show the tooltip that gives us the information about each point. Let´s see how works that visual tool:
+
+![alter text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/mouseover.png)
+
+
+## THE END
