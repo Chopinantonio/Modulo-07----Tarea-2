@@ -20,6 +20,7 @@ appendPointCharts();
 
 
 // 1. let's start by selecting the SVG Node
+
 function setupCanvasSize() {
   margin = {top: 20, left: 80, bottom: 20, right: 30};
   width = 960 - margin.left - margin.right;
@@ -47,6 +48,7 @@ function appendTooltip(domElement){
 // pixels
 // in this case we map the canvas range 0..350, to 0...maxSales
 // domain == data (data from 0 to maxSales) boundaries
+
 function setupXScale()
 {
 
@@ -58,6 +60,7 @@ function setupXScale()
 // Now we don't have a linear range of values, we have a discrete
 // range of values (one per product)
 // Here we are generating an array of product names
+
 function setupYScale()
 {
   var maxSales = d3.max(totalSales, function(d, i) {
