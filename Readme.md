@@ -12,7 +12,7 @@ The aim of this task is to create a Line chart adding dots and interaction (when
 
 In this case, we are going to use the following data:
 
-1[alt text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/data.png)
+![alt text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/data.png)
 
 
 #### 2) Select the svg node
