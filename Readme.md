@@ -21,4 +21,12 @@ Let´s add the SVG element with the new width and height, and translate the orig
 
 ![alt text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/svgnode.png)
 
+#### 3) Build X and Y axis
+
+We set up the scale of each axis of coordinates. We want the on the Y axis the vaules of "Sales", so we have a domain of [0, maxSales]. On the other hand, we want on X axis the different months we have taken into account in this task. Let´s see the code we have used for this:
+
+![alter text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/axisXY.png)
+
+
+
 

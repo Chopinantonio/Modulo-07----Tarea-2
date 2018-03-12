@@ -44,10 +44,7 @@ function appendTooltip(domElement){
     .style('opacity', 0);
 }
 
-// Now on the X axis we want to map totalSales values to
-// pixels
-// in this case we map the canvas range 0..350, to 0...maxSales
-// domain == data (data from 0 to maxSales) boundaries
+// X and Y axis
 
 function setupXScale()
 {
@@ -56,10 +53,6 @@ function setupXScale()
       .range([0, width])
       .domain(d3.extent(totalSales, function(d) { return d.month}));
 }
-
-// Now we don't have a linear range of values, we have a discrete
-// range of values (one per product)
-// Here we are generating an array of product names
 
 function setupYScale()
 {
