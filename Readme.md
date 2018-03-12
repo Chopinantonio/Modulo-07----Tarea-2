@@ -49,4 +49,4 @@ First, we define the points on each value of our data in our lines graph. After 
 ![alter text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/mouseover.png)
 
 
-## THE END
+## THE END -- José Antonio Montes Cervantes
