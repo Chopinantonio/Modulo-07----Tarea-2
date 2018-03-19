@@ -35,7 +35,7 @@ Now, it´s time to create the lines of the graph. First of all, we create a vari
 
 #### 5) Add dots and interaction
 
-Finally, let's add a function that should allow us to obtain information whenever we click on. In order to achive that, we will create the following "tooltip". A tooltip is a tool of visual help, which works showing information when the cursor is placed on a graphical element.
+Finally, let's add a function that should allow us to obtain information whenever we click on. In order to achieve that, we will create the following "tooltip". A tooltip is a tool of visual help, which works showing information when the cursor is placed on a graphical element.
 
 ![alter text](https://github.com/Chopinantonio/Modulo-07----Tarea-2/blob/master/Pictures/tooltip.png)
 
